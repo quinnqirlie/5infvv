@@ -1,0 +1,7 @@
+gewicht=input("Wat is je gewicht in kg?:")
+gewicht = int(gewicht)
+lengte=input("Wat is je lengte in meters?:")
+lengte = float(lengte)
+BMI = gewicht/(lengte*lengte)
+BMI_round=round(BMI,1)
+print( f"Je BMI is {BMI_round}")

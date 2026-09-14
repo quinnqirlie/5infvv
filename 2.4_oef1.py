@@ -1,3 +1,4 @@
 voornaam = "quinn"
 achternaam = "knapen"
-leeftijd = 
+leeftijd = "16"
+print ( f"Hallo ik ben {leeftijd} jaar oud en heet {voornaam} {achternaam}.")
