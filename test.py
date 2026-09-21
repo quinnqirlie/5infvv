@@ -1,6 +1,9 @@
-getal1 = input("Geef je eerste getal:")
-getal2 = input("Geef je tweede getal:")
-getal1 = int(getal1)
-getal2 = int(getal2)
-som = getal1+ getal2
-print(f"De som van de cijfers is {som}")
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for rij in matrix:
+    for element in rij:
+        print(element)
