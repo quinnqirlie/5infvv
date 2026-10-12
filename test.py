@@ -1,9 +1,14 @@
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+woorden = []
 
-for rij in matrix:
-    for element in rij:
-        print(element)
+zin = input("Voer een zin in: ")
+for woord in zin.lower().split():
+    woorden.append(woord.strip(",.;:?!"))
+
+frequentie = {}
+for woord in woorden:
+    if woord in frequentie:
+        frequentie[woord] += 1
+    else:
+        frequentie[woord] = 1
+
+print(frequentie)
