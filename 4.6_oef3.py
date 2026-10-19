@@ -16,7 +16,7 @@ for beurt in range(100):
         keuze = input("kies een optie(1 -5): ")
         
         if keuze == "1":
-            naam = input("Geef de naam van je nieuwe contact: ").strip().lower()    
+            naam = input("Geef de naam van je nieuwe contact: ")   
             nummer = input("Geef het nummer van je nieuwe contact: ")
             telefoonboek [naam] = nummer
             print("Contact toegevoegd")
@@ -25,7 +25,7 @@ for beurt in range(100):
 
         if keuze == "2":
 
-            naam = input("Welk contact wil je opzoeken? ").strip().lower()
+            naam = input("Welk contact wil je opzoeken? ")
 
             if naam in telefoonboek:
 
@@ -38,7 +38,7 @@ for beurt in range(100):
 
 
         if keuze == "3":
-            naam = input("Geef de naam die je wilt verwijderen")
+            naam = input("Geef de naam die je wilt verwijderen:")
             if naam in telefoonboek:
                 del telefoonboek[naam]
 
