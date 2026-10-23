@@ -17,4 +17,13 @@ print(nieuwe_prijzen)
 duurder = {}
 for product, prijs in producten.items():
     if prijs > 1.50:
-        
+        duurder[product]= prijs
+
+print(duurder)
+
+hoofdletters = {}
+for product,prijs in nieuwe_prijzen.items():
+    uppercase = product.upper()
+    hoofdletters[uppercase] = prijs
+
+print(hoofdletters)
