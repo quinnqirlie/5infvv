@@ -5,7 +5,7 @@ woordenboek = {
 }
 
 gevraagd = input("Van welk Nederlands woord wil je de vertaling?: ").lower().strip()
-doeltaal = input("Wat is de doeltaal? Engels, Frans, Spaans?: ")
+doeltaal = input("Wat is de doeltaal? Engels, Frans, Spaans?: ").capitalize()
 vertaling = woordenboek[gevraagd][doeltaal]
 
 if gevraagd in woordenboek.keys():
