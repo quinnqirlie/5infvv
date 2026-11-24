@@ -6,24 +6,25 @@ producten = {
 }
 vaste_kosten_per_maand = 2400.0
 
+totale_omzet = 0
+totale_variabele_kost = 0 #om in de for lus alles samen te tellen
 
 print("De contributiemarge / winst per product is:")
 for eten, info in producten.items():
     prijs = info["prijs"] #makkelijkere benamingen om als variabele te gebruiken
     variabele_kost = info["variabele_kost"]
     verkocht = info["verkocht"]
+    totaal_verkocht = sum(verkocht) #afzet van 4 weken per product
 
     contributiemarge = prijs - variabele_kost #winst berekenen
-    procent = contributiemarge / prijs * 100 #in procent
-    procent = round(procent,2)
+    procent = round(contributiemarge / prijs * 100, 2)
     print(f"{eten}: €{contributiemarge} -> {procent}%")
 
+    totale_omzet += prijs * totaal_verkocht
+    totale_variabele_kost += variabele_kost * totaal_verkocht
 
 print(" ")
-totaal_omzet = 0
 print("Maandresultaat:")
-for eten, info in producten.items():
-    for aantal in info["verkocht"]:
-        omzet = info["prijs"] * aantal
-        totaal_omzet += omzet
-print(f"Omzet: {totaal_omzet}")
+print(f"Omzet: {totale_omzet}")
+print(f"Variabele kosten: {totale_variabele_kost}")
+print(f"Vaste kosten: {vaste_kosten_per_maand}")
